@@ -1,15 +1,22 @@
 // if1
 // Make me compile!
 
-// I AM NOT DONE
 package main_test
 
-import "testing"
+import (
+	"testing"
+)
 
 func bigger(a int, b int) int {
 	// Complete this function to return the bigger number
+	var x (int)
+	if a > b {
+		x = a
+	} else {
+		x = b
+	}
 	// Use only if statements
-	return 0
+	return x
 }
 
 func TestTwoIsBiggerThanOne(t *testing.T) {
