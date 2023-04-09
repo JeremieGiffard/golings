@@ -1,13 +1,14 @@
 // anonymous functions3
 // Make me compile!
 
-// I AM NOT DONE
 package main
 
 import "fmt"
 
+var index = 1
+
 func updateStatus() func() string {
-	var index int
+
 	orderStatus := map[int]string{
 		1: "TO DO",
 		2: "DOING",
@@ -16,7 +17,7 @@ func updateStatus() func() string {
 
 	return func() string {
 		index++
-		return "What should I return?"
+		return orderStatus[index]
 	}
 }
 
@@ -30,6 +31,7 @@ func main() {
 	if status == "DONE" {
 		fmt.Println("Good Job!")
 	} else {
+		fmt.Println(status)
 		panic("To complete the challenge the status must be DONE")
 	}
 }
